@@ -45,7 +45,9 @@ class Knapsack {
             if (val+sv[i+1] > best) {
                 s[i] = false;
                 recursive(i+1, val, pes);
-    }   }   }
+            }
+        }
+    }
 
 public:
     Knapsack(int n, vector<double> p, vector<double> v, double C) {

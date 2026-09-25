@@ -11,4 +11,5 @@ int main() {
     while (not pq.empty()) {
         cout << pq.top() << endl;
         pq.pop();
-}   }
+    }
+}

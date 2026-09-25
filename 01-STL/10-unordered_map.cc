@@ -13,4 +13,5 @@ int main() {
     while (cin >> x) ++m[x];
     for (auto elem : m) {
         cout << elem.first << " " << elem.second << endl;
-}   }
+    }
+}

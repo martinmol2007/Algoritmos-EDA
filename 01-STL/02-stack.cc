@@ -11,4 +11,5 @@ int main() {
     while (not s.empty()) {
         cout << s.top() << endl;
         s.pop();
-}   }
+    }
+}

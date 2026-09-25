@@ -31,7 +31,8 @@ void make_heap (vector<elem>& v) {
     int n = v.size();
     for (int i = n/2 - 1; i >= 0; i--) {
         sink(v, n, i);
-}   }
+    }
+}
 
 template <typename elem>
 void heap_sort (vector<elem>& v) {
@@ -40,7 +41,8 @@ void heap_sort (vector<elem>& v) {
     for (int i = n - 1; i >= 1; --i) {
         swap(v[0], v[i]);
         sink(v, i, 0);
-}   }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

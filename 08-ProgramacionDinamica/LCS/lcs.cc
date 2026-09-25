@@ -32,7 +32,8 @@ int lcs (const string& A, const string& B, string& subsecuencia) {
         for (int j = 1; j <= m; ++j) {
             if (A[i-1] == B[j-1]) dp[i][j] = dp[i-1][j-1] + 1;
             else                  dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
-    }   }
+        }
+    }
 
     // Reconstruccion hacia atras desde dp[n][m].
     subsecuencia.clear();

@@ -18,7 +18,9 @@ void dfs_rec (const graph& G, int u, vector<boolean>& vis, list<int>& L) {
         vis[u] = true;  L.push_back(u);
         for (int v : G[u]) {
             dfs_rec(G, v, vis, L);
-}   }   }
+        }
+    }
+}
 
 list<int> dfs_rec (const graph& G) {
     int n = G.size();
@@ -48,7 +50,10 @@ list<int> dfs_ite (const graph& G) {
                 vis[v] = true;  L.push_back(v);
                 for (int w : G[v]) {
                     S.push(w);
-    }   }   }   }
+                }
+            }
+        }
+    }
     return L;
 }
 

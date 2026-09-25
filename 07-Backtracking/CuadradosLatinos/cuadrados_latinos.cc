@@ -31,7 +31,10 @@ class LatinSquare {
                     F[i][c] = C[j][c] = false;
                     recursive(cas+1);
                     F[i][c] = C[j][c] = true;   // deshacer
-    }   }   }   }
+                }
+            }
+        }
+    }
 
 public:
     LatinSquare(int n) {

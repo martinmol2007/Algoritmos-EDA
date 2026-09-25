@@ -17,7 +17,8 @@ void sel_sort (vector<elem>& v) {
     for (int i = 0; i < n - 1; ++i) {
         int p = pos_min(v, i, n-1);
         swap(v[i], v[p]);
-}   }
+    }
+}
 
 // Devuelve la posicion del minimo de v[l..r].
 template <typename elem>
@@ -26,7 +27,8 @@ int pos_min (vector<elem>& v, int l, int r) {
     for (int j = l + 1; j <= r; ++j) {
         if (v[j] < v[p]) {
             p = j;
-    }   }
+        }
+    }
     return p;
 }
 

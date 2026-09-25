@@ -70,7 +70,8 @@ private:
         if (i != 1 and v[i/2] > v[i]) {
             swap(v[i], v[i/2]);
             shift_up(i/2);
-    }   }
+        }
+    }
 
     // Hunde un nodo por el arbol mientras haga falta.
     void shift_down (int i) {
@@ -81,7 +82,9 @@ private:
             if (v[i] > v[c]) {
                 swap(v[i],v[c]);
                 shift_down(c);
-    }   }   }
+            }
+        }
+    }
 };
 
 // ------------------------------------------------------------------- demo

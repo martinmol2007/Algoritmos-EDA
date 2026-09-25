@@ -23,7 +23,10 @@ class NQueens {
                 T[i] = j;
                 if (legal(i)) {
                     recursive(i+1);
-    }   }   }   }
+                }
+            }
+        }
+    }
 
     // Indicates if the configuration with queens 0..i is legal
     // knowing that the configuration with queens 0..i-1 is.
@@ -31,7 +34,8 @@ class NQueens {
         for (int k = 0; k < i; ++k) {
             if (T[k]==T[i] or T[i]-i==T[k]-k or T[i]+i==T[k]+k) {
                 return false;
-        }   }
+            }
+        }
         return true;
     }
 

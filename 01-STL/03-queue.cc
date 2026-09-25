@@ -11,4 +11,5 @@ int main() {
     while (not q.empty()) {
         cout << q.front() << endl;
         q.pop();
-}   }
+    }
+}

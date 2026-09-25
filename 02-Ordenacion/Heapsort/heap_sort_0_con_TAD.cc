@@ -20,7 +20,8 @@ void heap_sort_0 (vector<elem>& v) {
     for (int i = n-1; i >= 0; --i) {
         v[i] = pq.top();
         pq.pop();
-}   }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

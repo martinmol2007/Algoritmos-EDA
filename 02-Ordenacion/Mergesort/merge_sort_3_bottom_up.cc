@@ -28,7 +28,9 @@ void merge_sort_bu (vector<elem>& v) {
     for (int m = 1; m < n; m *= 2) {
         for (int i = 0; i < n - m; i += 2*m) {
             merge(v, i, i + m - 1, min(i + 2 * m - 1, n - 1));
-}   }   }
+        }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

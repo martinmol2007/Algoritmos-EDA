@@ -17,14 +17,16 @@ list<int> topological_sort(const graph& G) {
     for (int u = 0; u < n; ++u) {
         for (int v : G[u]) {
             ++ge[v];
-    }   }
+        }
+    }
 
     // Los vertices sin dependencias pendientes pueden salir ya.
     stack<int> S;
     for (int u = 0; u < n; ++u) {
         if (ge[u] == 0) {
             S.push(u);
-    }   }
+        }
+    }
 
     list<int> L;
     while (not S.empty()) {
@@ -33,7 +35,9 @@ list<int> topological_sort(const graph& G) {
         for (int v : G[u]) {
             if (--ge[v] == 0) {     // v ya no depende de nadie
                 S.push(v);
-    }   }   }
+    }
+        }
+    }
     return L;
 }
 

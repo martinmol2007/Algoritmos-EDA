@@ -41,7 +41,10 @@ class NQueens {
                     mc[j] = false;                  // deshacer
                     md1[diag1(i, j)] = false;
                     md2[diag2(i, j)] = false;
-    }   }   }   }
+                }
+            }
+        }
+    }
 
     void write() {
         for (int i = 0; i < n; ++i) {

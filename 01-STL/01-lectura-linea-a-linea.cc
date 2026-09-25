@@ -14,4 +14,5 @@ int main() {
         int x;
         while (ss >> x) sum += x;
         cout << sum << endl;
-}   }
+    }
+}

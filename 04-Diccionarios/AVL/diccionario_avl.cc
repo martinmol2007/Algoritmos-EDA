@@ -72,7 +72,8 @@ public:
             return p->info;
         } else {
             throw "Key does not exist";
-    }   }
+        }
+    }
 
     // Coste: Theta(log n) garantizado.
     bool contains (const Key& key) {
@@ -90,7 +91,8 @@ private:
             free(p->left);
             free(p->right);
             delete p;
-    }   }
+        }
+    }
 
     static Node* copy (Node* p) {
         return p ? new Node(p->key, p->info, copy(p->left), copy(p->right), p->height)
@@ -103,7 +105,8 @@ private:
                 return find(p->left, key);
             } else if (key > p->key) {
                 return find(p->right, key);
-        }   }
+            }
+        }
         return p;
     }
 
@@ -180,7 +183,8 @@ private:
         } else {
             p = new Node(key, info, nullptr, nullptr, 0);
             ++n;
-    }   }
+        }
+    }
 
     // ------------------------------------------------------- BORRADO
     // Como el erase_3 del ABB, pero reequilibrando al volver de la recursion.
@@ -208,7 +212,9 @@ private:
                     rebalance_right(p);
                 }
                 delete old; --n;
-    }   }   }
+            }
+        }
+    }
 
     // Reequilibra despues de que el subarbol IZQUIERDO haya menguado.
     void rebalance_left (Node*& p) {
@@ -220,7 +226,8 @@ private:
             }
         } else {
             update_height(p);
-    }   }
+        }
+    }
 
     // Reequilibra despues de que el subarbol DERECHO haya menguado.
     void rebalance_right (Node*& p) {
@@ -232,7 +239,8 @@ private:
             }
         } else {
             update_height(p);
-    }   }
+        }
+    }
 
     Node* extract_minimum (Node*& p) {
         if (p->left) {
@@ -243,7 +251,8 @@ private:
             Node* q = p;
             p = p->right;
             return q;
-    }   }
+        }
+    }
 
 // ---- Solo para la demostracion: comprueba el invariante y da la altura ----
 public:

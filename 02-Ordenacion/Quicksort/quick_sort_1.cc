@@ -18,7 +18,8 @@ void quick_sort_1 (vector<elem>& v, int l, int r) {
         int q = partition(v, l, r);
         quick_sort_1(v, l, q);
         quick_sort_1(v, q + 1, r);
-}   }
+    }
+}
 
 template <typename elem>
 void quick_sort_1 (vector<elem>& v) {
@@ -37,7 +38,8 @@ int partition (vector<elem>& v, int l, int r) {
         while (v[++i] < x);
         if (i >= j) return j;
         swap(v[i], v[j]);
-}   }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

@@ -12,4 +12,5 @@ int main() {
     while (cin >> x) ++m[x];
     for (map<string, int>::iterator it = m.begin(); it != m.end(); ++it) {
         cout << it->first << " " << it->second << endl;
-}   }
+    }
+}

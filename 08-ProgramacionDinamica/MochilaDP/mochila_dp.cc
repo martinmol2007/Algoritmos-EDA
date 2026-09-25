@@ -31,7 +31,9 @@ int mochila (const vector<int>& p, const vector<int>& v, int C,
             dp[i][c] = dp[i-1][c];                   // no coger el objeto i-1
             if (p[i-1] <= c) {
                 dp[i][c] = max(dp[i][c], dp[i-1][c - p[i-1]] + v[i-1]);
-    }   }   }
+            }
+        }
+    }
 
     // Reconstruccion: se va hacia atras viendo si dp[i][c] cambio respecto a
     // dp[i-1][c]. Si cambio, el objeto i-1 se cogio.
@@ -41,7 +43,8 @@ int mochila (const vector<int>& p, const vector<int>& v, int C,
         if (dp[i][c] != dp[i-1][c]) {
             cogidos[i-1] = true;
             c -= p[i-1];
-    }   }
+        }
+    }
 
     return dp[n][C];
 }
@@ -55,7 +58,8 @@ int mochila_memoria_lineal (const vector<int>& p, const vector<int>& v, int C) {
     for (int i = 0; i < n; ++i) {
         for (int c = C; c >= p[i]; --c) {
             dp[c] = max(dp[c], dp[c - p[i]] + v[i]);
-    }   }
+        }
+    }
     return dp[C];
 }
 

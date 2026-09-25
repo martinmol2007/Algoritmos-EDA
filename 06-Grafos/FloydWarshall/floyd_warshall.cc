@@ -27,7 +27,9 @@ void floyd_warshall (vector<vector<double>>& d) {
                 if (d[i][k] != INF and d[k][j] != INF and
                     d[i][k] + d[k][j] < d[i][j]) {
                     d[i][j] = d[i][k] + d[k][j];
-    }   }   }   }
+            }
+        }
+    }   }
 }
 
 // ------------------------------------------------------------------- demo

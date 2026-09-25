@@ -41,7 +41,10 @@ class Scheduling {
                     }
                     done[task] = false;         // deshacer
                     assig[worker] = -1;
-    }   }   }   }
+                }
+            }
+        }
+    }
 
     // Cota inferior del tiempo que falta por acumular.
     double bound(int worker, int task) {

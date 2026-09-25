@@ -88,7 +88,8 @@ public:
             return p->info;
         } else {
             throw "Key does not exist";
-    }   }
+        }
+    }
 
     // ------------------------ Indica si el diccionario contiene key. Theta(h).
     bool contains (const Key& key) {
@@ -110,7 +111,8 @@ private:
             free(p->left);
             free(p->right);
             delete p;
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Devuelve un puntero a una copia del arbol apuntado por p.
@@ -131,7 +133,8 @@ private:
                 return find(p->left, key);
             } else if (key > p->key) {
                 return find(p->right, key);
-        }   }
+            }
+        }
         return p;
     }
 
@@ -152,7 +155,8 @@ private:
         } else {
             p = new Node(key, info, nullptr, nullptr);
             ++n;
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Devuelve un puntero al nodo con la clave minima del arbol de raiz p.
@@ -193,7 +197,9 @@ private:
                     p = p->right;
                 }
                 delete q; --n;
-    }   }   }
+            }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // BORRADO version 2: cuando los dos hijos son no vacios, copia el minimo del
@@ -218,7 +224,9 @@ private:
                 Node* m = minimum(p->right);
                 p->key = m->key; p->info = m->info;
                 erase_2(p->right, m->key);
-    }   }   }
+            }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // BORRADO version 3: cuando los dos hijos son no vacios, llama a
@@ -243,7 +251,9 @@ private:
                     p = m;
                 }
                 delete q; --n;
-    }   }   }
+            }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Extrae del arbol apuntado por p el nodo que contiene el minimo y devuelve
@@ -256,7 +266,8 @@ private:
             Node* q = p;
             p = p->right;
             return q;
-    }   }
+        }
+    }
 };
 
 // ------------------------------------------------------------------- demo

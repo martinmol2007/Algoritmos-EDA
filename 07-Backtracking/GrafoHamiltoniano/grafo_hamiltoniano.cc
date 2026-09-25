@@ -41,7 +41,10 @@ class HamiltonianGraph {
                     recursive(u, t+1);
                     s[v] = -1;              // deshacer
                     if (found) return;
-    }   }   }   }
+                }
+            }
+        }
+    }
 
 public:
     HamiltonianGraph(Graph G) {
@@ -98,4 +101,5 @@ int main() {
             cout << u << " ";
         }
         cout << endl;
-}   }
+    }
+}

@@ -15,7 +15,10 @@ void bubble_sort (vector<elem>& v) {
         for (int j = n - 1; j > i; --j) {
             if (v[j - 1] > v[j]) {
                 swap(v[j - 1], v[j]);
-}   }   }   }
+            }
+        }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

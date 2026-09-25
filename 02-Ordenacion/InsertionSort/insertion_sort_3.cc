@@ -14,7 +14,8 @@ int pos_min (vector<elem>& v, int l, int r) {
     for (int j = l + 1; j <= r; ++j) {
         if (v[j] < v[p]) {
             p = j;
-    }   }
+        }
+    }
     return p;
 }
 
@@ -29,7 +30,8 @@ void ins_sort_3 (vector<elem>& v) {
             v[j] = v[j - 1];
         }
         v[j] = x;
-}   }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

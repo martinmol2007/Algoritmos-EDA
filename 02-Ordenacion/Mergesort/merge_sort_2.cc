@@ -24,7 +24,8 @@ void merge_sort_2 (vector<elem>& v, int l, int r) {
         merge_sort_2(v, l, m);
         merge_sort_2(v, m + 1, r);
         merge(v, l, m, r);
-}   }
+    }
+}
 
 template <typename elem>
 void merge_sort_2 (vector<elem>& v) {
@@ -41,7 +42,8 @@ void ins_sort (vector<elem>& v, int l, int r) {
             v[j] = v[j - 1];
         }
         v[j] = x;
-}   }
+    }
+}
 
 template <typename elem>
 void merge (vector<elem>& v, int l, int m, int r) {

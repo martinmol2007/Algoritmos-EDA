@@ -27,7 +27,8 @@ class KnightJumps {
             M[x][y] = step + 1;
             recursive(step + 1, x, y);
             M[x][y] = -1;               // deshacer
-    }   }
+        }
+    }
 
     void recursive(int step, int x, int y) {
         if (step == n*n-1) {
@@ -38,7 +39,8 @@ class KnightJumps {
             try_it(step, x+1, y+2); try_it(step, x-1, y+2);
             try_it(step, x-2, y+1); try_it(step, x-2, y-1);
             try_it(step, x-1, y-2); try_it(step, x+1, y-2);
-    }   }
+        }
+    }
 
 public:
     KnightJumps(int n, int ox, int oy) {

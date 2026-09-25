@@ -32,7 +32,8 @@ public:
             t[i].second = info;
         } else {
             t.push_back(Pair(key, info));
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Borra key y su informacion asociada. Si la clave no pertenece al
@@ -44,7 +45,8 @@ public:
         if (i < int(t.size())) {
             t[i] = t[t.size() - 1];
             t.pop_back();
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Devuelve una referencia a la informacion asociada a key. Lanza una
@@ -57,7 +59,8 @@ public:
             return t[i].second;
         } else {
             throw "Key does not exist.";
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Indica si el diccionario contiene key.

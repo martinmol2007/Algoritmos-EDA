@@ -35,7 +35,10 @@ void dijkstra(const WGraph& G, int s, vector<double>& d, vector<int>& p) {
                     d[v] = d[u] + c;
                     p[v] = u;
                     Q.push(WArc(d[v], v));
-}   }   }   }   }
+}
+        }   }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 // Entrada:  n m s   seguido de m arcos "u v peso".

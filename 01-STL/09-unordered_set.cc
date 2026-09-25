@@ -21,4 +21,5 @@ int main() {
     }
     for (auto x : s1) {
         if (s2.find(x) != s2.end()) cout << x << endl;
-}   }
+    }
+}

@@ -59,7 +59,8 @@ public:
         } else {
             t[h].push_back(Pair(key, info));
             ++n;
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Borra key y su informacion asociada. Si la clave no pertenece al
@@ -73,7 +74,8 @@ public:
         if (p != t[h].end()) {
             t[h].erase(p);
             --n;
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Devuelve una referencia a la informacion asociada a key. Lanza una
@@ -88,7 +90,8 @@ public:
             return p->second;
         } else {
             throw "Key does not exist";
-    }   }
+        }
+    }
 
     // -----------------------------------------------------------------------
     // Indica si el diccionario contiene key.

@@ -25,7 +25,10 @@ list<int> bfs_1 (const graph& G) {
                 vis[v] = true; L.push_back(v);
                 for (int w : G[v])  {
                     Q.push(w);
-    }   }   }   }
+                }
+            }
+        }
+    }
     return L;
 }
 
@@ -48,7 +51,11 @@ list<int> bfs_2 (const graph& G) {
                 for (int w : G[v])  {
                     if (not enc[w]) {
                         Q.push(w);  enc[w] = true;
-    }   }   }   }   }
+                    }
+                }
+            }
+        }
+    }
     return L;
 }
 
@@ -68,7 +75,9 @@ vector<int> bfs_distancias (const graph& G, int s) {
             if (d[v] == -1) {
                 d[v] = d[u] + 1;
                 Q.push(v);
-    }   }   }
+            }
+        }
+    }
     return d;
 }
 

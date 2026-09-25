@@ -20,7 +20,8 @@ int partition (vector<elem>& v, int l, int r) {
         while (v[++i] < x);
         if (i >= j) return j;
         swap(v[i], v[j]);
-}   }
+    }
+}
 
 // Insertion sort sobre el rango v[l..r]. (El PDF lo usa pero no lo lista.)
 template <typename elem>
@@ -32,7 +33,8 @@ void ins_sort (vector<elem>& v, int l, int r) {
             v[j] = v[j - 1];
         }
         v[j] = x;
-}   }
+    }
+}
 
 template <typename elem>
 void quick_psort_3 (vector<elem>& v, int l, int r) {
@@ -41,7 +43,8 @@ void quick_psort_3 (vector<elem>& v, int l, int r) {
         int q = partition(v, l, r);
         quick_psort_3(v, l, q);
         quick_psort_3(v, q + 1, r);
-}   }
+    }
+}
 
 template <typename elem>
 void quick_sort_3 (vector<elem>& v) {

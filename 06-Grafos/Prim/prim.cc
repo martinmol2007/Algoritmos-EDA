@@ -31,7 +31,10 @@ void MST(const WGraph& G, vector<int>& parent) {
                 double p = e.first;
                 int w = e.second;
                 Q.push({-p, {v, w}});          // signo cambiado: max-heap -> min
-}   }   }   }
+            }
+        }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 // Entrada:  n m   seguido de m aristas "u v peso" (grafo NO dirigido).

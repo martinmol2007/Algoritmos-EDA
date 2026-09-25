@@ -20,4 +20,5 @@ int main() {
     }
     for (set<int>::iterator it = s1.begin(); it != s1.end(); ++it) {
         if (s2.find(*it) != s2.end()) cout << *it << endl;
-}   }
+    }
+}

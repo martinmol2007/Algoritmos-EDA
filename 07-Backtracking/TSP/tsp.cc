@@ -40,7 +40,10 @@ class TSP {
                     s[v] = u;
                     recursive(u, t+1, c+M[v][u]);
                     s[v] = -1;                  // deshacer
-    }   }   }   }
+    }
+            }
+        }
+    }
 
 public:
     TSP(distance_matrix M) {
@@ -77,7 +80,8 @@ int main () {
     for (int u = 0; u < n; ++u) {
         for (int v = 0; v < n; ++v) {
             M[u][v] = sqrt((x[u]-x[v])*(x[u]-x[v]) + (y[u]-y[v])*(y[u]-y[v]));
-    }   }
+        }
+    }
     double t = now();
     TSP tsp(M);
     t = now() - t;

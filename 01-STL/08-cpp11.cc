@@ -27,4 +27,5 @@ int main() {
         cout << "{";
         for (auto x : s) cout << x << ",";
         cout << "}" << endl;
-}   }
+    }
+}

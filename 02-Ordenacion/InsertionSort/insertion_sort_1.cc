@@ -13,7 +13,9 @@ void ins_sort_1 (vector<elem>& v) {
     for (int i = 1; i < n; ++i) {
         for (int j = i; j > 0 and v[j - 1] > v[j]; --j) {
             swap(v[j - 1], v[j]);
-}   }   }
+        }
+    }
+}
 
 // ------------------------------------------------------------------- demo
 int main() {

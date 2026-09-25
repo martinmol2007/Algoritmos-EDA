@@ -113,7 +113,8 @@ inline matrix<double> randmatrix(int n) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; j++) {
             m[i][j] = randdouble();
-    }   }
+        }
+    }
     return m;
 }
 // Devuelve un vector de n reales aleatorios.
