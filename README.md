@@ -172,3 +172,8 @@ Los algoritmos no son islas; los READMEs cruzan referencias donde toca:
   (15 de febrer de 2017). Fichero `eda-codis.pdf`.
 - **Organización, explicaciones, correcciones y algoritmos extra**: este
   repositorio, hecho con ayuda de Claude.
+
+---
+
+### Autor
+@martinmol2007
